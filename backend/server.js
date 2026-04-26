@@ -33,13 +33,13 @@ app.use('/api/assignments', assignmentRoutes);
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'OK', message: 'LMS API is running' }));
 
-// Serve frontend in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'index.html'));
-  });
-}
+// Frontend serving removed - deploying backend and frontend separately on Render
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'index.html'));
+//   });
+// }
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
