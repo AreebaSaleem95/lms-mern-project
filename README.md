@@ -1,115 +1,171 @@
-# Full Fledged MERN Stack Learning Management System
+# 📚 Learning Management System (MERN Stack)
 
-A full-stack Learning Management System (LMS) built with the MERN stack, following clean code principles, MVC architecture, and role-based access control for **Admin**, **Instructor**, and **Student** users.
+A full-stack Learning Management System (LMS) built using the MERN stack.  
+This platform enables students to enroll in courses, instructors to manage content, and admins to control the system with secure authentication and role-based access.
 
-## Overview
+---
 
-This LMS provides:
+## 🚀 Live Demo
 
-- Secure authentication with JWT and bcrypt-hashed passwords.
-- Role-based dashboards for admins, instructors, and students.
-- Course management with lessons, categories, and pricing.
-- Student enrollments with progress tracking.
-- A modern React frontend using React Router, Axios, and React Bootstrap.
+**Frontend:**  
+https://lms-mern-project-1-t9ya.onrender.com  
 
-## Technologies Used
+**Backend API:**  
+https://lms-mern-project-fhmv.onrender.com  
 
-- **Frontend**: React, React Router, Axios, Bootstrap, React Bootstrap, Vite.
-- **Backend**: Node.js, Express.js, MongoDB, Mongoose.
-- **Auth & Security**: JWT, bcryptjs, dotenv, role-based middleware, CORS.
+**GitHub Repository:**  
+https://github.com/AreebaSaleem95/lms-mern-project  
 
-## Project Structure (High-Level)
+---
 
-- `backend/` – Express API (MVC: models, controllers, routes, middleware, config).
-- `frontend/` – React SPA (components, pages, routes, context, services).
+## 🛠️ Tech Stack
 
-## Installation
+### Frontend
+- React.js
+- Axios
+- React Router DOM
 
-### Prerequisites
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
 
-- Node.js (LTS) and npm installed.
-- MongoDB running locally or accessible via connection string.
+### Authentication & Security
+- JSON Web Token (JWT)
+- bcrypt
 
-### Backend Setup
+### Deployment
+- Render (Frontend + Backend)
 
+---
+
+## ✨ Features
+
+### 👨‍🎓 Student
+- Register & Login  
+- Browse courses  
+- Enroll in courses  
+
+### 👨‍🏫 Instructor
+- Create courses  
+- Manage course content  
+- View enrolled students  
+
+### 🛡️ Admin
+- Manage users  
+- Control platform data  
+
+---
+
+## 🔐 Authentication & Authorization
+
+- Secure login system using JWT  
+- Password hashing using bcrypt  
+- Role-based access control  
+- Protected routes using middleware  
+
+---
+
+## 📁 Project Structure
+lms-mern-project/
+│
+├── frontend/
+│ ├── src/
+│ └── public/
+│
+├── backend/
+│ ├── models/
+│ ├── routes/
+│ ├── controllers/
+│ ├── middleware/
+│ └── config/
+│
+├── .env.example
+└── README.md
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone Repository
 ```bash
-cd "Learning Management system/backend"
+git clone https://github.com/AreebaSaleem95/lms-mern-project.git
+cd lms-mern-project
+2. Backend Setup
+cd backend
 npm install
-cp ../.env.example .env   # On Windows, create .env manually if needed
-```
+Create .env file:
 
-Edit `backend/.env` with your values:
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
 
-- `PORT=5000`
-- `MONGO_URI=mongodb://localhost:27017/lms_db`
-- `JWT_SECRET=your_long_random_secret`
-- `JWT_EXPIRES_IN=7d`
+Run backend:
 
-Start the backend in development:
-
-```bash
-npm run dev
-```
-
-The API will run at `http://localhost:5000/api`.
-
-### Frontend Setup
-
-```bash
-cd "Learning Management system/frontend"
+npm start
+3. Frontend Setup
+cd frontend
 npm install
-```
-
-Optionally create `frontend/.env` and set:
-
-```bash
-VITE_API_BASE_URL=http://localhost:5000/api
-```
-
-Start the frontend dev server:
-
-```bash
 npm run dev
-```
+📡 API Endpoints
+Auth
+POST /api/auth/register
+POST /api/auth/login
+Courses
+GET /api/courses
+POST /api/courses
+DELETE /api/courses/:id
+Health Check
+GET /api/health
+📸 Screenshots
 
-The app will run at the Vite URL (default `http://localhost:5173`).
+Add your screenshots here
 
-## How to Run the Project
+/screenshots/home.png
+/screenshots/login.png
+/screenshots/dashboard.png
+/screenshots/courses.png
+⚡ Repository Optimization & Code Quality
+🧱 Architecture
+Modular backend structure (MVC pattern)
+Clean React component structure
+Separation of concerns
+🔐 Security
+JWT authentication
+bcrypt password hashing
+Protected routes & middleware
+⚙️ Performance
+Async/await API handling
+Optimized MongoDB queries
+Efficient React rendering
+🌐 Deployment
+Hosted on Render
+Environment variables configured
+Scalable structure for production
+🧪 Testing
+API tested using Postman
+Error handling middleware implemented
+🧠 What I Learned
+Full-stack MERN development
+REST API design
+Authentication & authorization
+Deployment workflows
+Debugging and error handling
+🚀 Future Improvements
+Payment integration
+Video lectures
+Real-time chat
+Advanced UI/UX
+Performance optimization
+👩‍💻 Author
 
-1. **Start MongoDB** (locally or ensure your remote cluster is reachable).
-2. **Start backend**: `cd backend && npm run dev`.
-3. **Start frontend**: `cd frontend && npm run dev`.
-4. Open the frontend URL in the browser and register/login.
+Areeba Saleem
+BS Computer Science
+Full Stack Developer
 
-## API Endpoints
+GitHub: https://github.com/AreebaSaleem95
 
-Base URL: `http://localhost:5000/api`
+⭐ Acknowledgment
 
-### Authentication
-
-- **POST** `/auth/register` – Register a new user (body: `name`, `email`, `password`, `role?`).
-- **POST** `/auth/login` – Login and receive JWT (body: `email`, `password`).
-
-### Courses
-
-- **GET** `/courses` – Public list of all courses.
-- **POST** `/courses` – Create course (roles: `instructor`, `admin`, requires JWT).
-- **PUT** `/courses/:id` – Update course (owner instructor or `admin`, requires JWT).
-- **DELETE** `/courses/:id` – Delete course (owner instructor or `admin`, requires JWT).
-
-### Users (Admin Only)
-
-- **GET** `/users` – List all users (requires JWT, role `admin`).
-- **DELETE** `/users/:id` – Delete a user (requires JWT, role `admin`).
-
-### Enrollment
-
-- **POST** `/enroll` – Enroll authenticated student in course (body: `courseId`, requires JWT).
-- **GET** `/my-courses` – Get authenticated student’s enrollments and course info (requires JWT).
-
-## Notes
-
-- JWT tokens are expected in the `Authorization` header as `Bearer <token>`.
-- Frontend Axios instance automatically attaches the stored JWT (from `localStorage`) to requests.
-- All critical backend modules and frontend components are fully commented for learning and maintainability.
-
+Thanks to my instructors and learning programs for guidance and support.
