@@ -104,3 +104,62 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 **Run backend:**
+___________________________________________________________________________________________________
+**## 3. Frontend Setup**
+cd frontend
+npm install
+npm run dev
+___________________________________________________________________________________________________
+**📡 API Endpoints**
+Authentication
+POST /api/auth/register
+POST /api/auth/login
+Courses
+GET /api/courses
+POST /api/courses
+DELETE /api/courses/:id
+Health Check
+GET /api/health
+⚡ Repository Optimization & Code Quality
+🧱 Architecture
+Modular backend structure (MVC pattern)
+Clean and reusable React components
+Proper separation of concerns
+🔐 Security
+JWT-based authentication
+Password hashing using bcrypt
+Protected routes using middleware
+⚙️ Performance
+Asynchronous API handling using async/await
+Optimized MongoDB queries
+Efficient React rendering
+🌐 Deployment
+Fully deployed on Render
+Environment variables configured for production
+Scalable full-stack architecture
+🧪 Testing
+API tested using Postman
+Centralized error handling middleware
+🧠 What I Learned
+Full-stack MERN development
+RESTful API design
+Authentication and authorization systems
+Deployment and environment configuration
+Debugging and error handling
+🚀 Future Improvements
+Payment integration
+Video lecture system
+Real-time chat functionality
+Enhanced UI/UX design
+Performance optimizations
+👩‍💻 Author
+
+Areeba Saleem
+BS Computer Science
+Full Stack Developer
+
+GitHub: https://github.com/AreebaSaleem95
+
+⭐ Acknowledgment
+
+Thanks to my instructors and learning programs for their guidance and support.
