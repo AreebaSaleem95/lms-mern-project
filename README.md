@@ -1,7 +1,7 @@
 # 📚 Learning Management System (MERN Stack)
 
 A full-stack Learning Management System (LMS) built using the MERN stack.  
-This platform enables students to enroll in courses, instructors to manage content, and admins to control the system with secure authentication and role-based access.
+The platform allows students to enroll in courses, instructors to manage content, and admins to control the system with secure authentication and role-based access.
 
 ---
 
@@ -21,35 +21,34 @@ https://github.com/AreebaSaleem95/lms-mern-project
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React.js
-- Axios
-- React Router DOM
+- React.js  
+- Axios  
+- React Router DOM  
 
 ### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
+- Node.js  
+- Express.js  
+- MongoDB  
+- Mongoose  
 
 ### Authentication & Security
-- JSON Web Token (JWT)
-- bcrypt
+- JSON Web Token (JWT)  
+- bcrypt  
 
 ### Deployment
-- Render (Frontend + Backend)
+- Render (Frontend & Backend)  
 
 ---
 
 ## ✨ Features
 
 ### 👨‍🎓 Student
-- Register & Login  
-- Browse courses  
+- Register and login  
+- Browse available courses  
 - Enroll in courses  
 
 ### 👨‍🏫 Instructor
-- Create courses  
-- Manage course content  
+- Create and manage courses  
 - View enrolled students  
 
 ### 🛡️ Admin
@@ -60,10 +59,10 @@ https://github.com/AreebaSaleem95/lms-mern-project
 
 ## 🔐 Authentication & Authorization
 
-- Secure login system using JWT  
+- Secure authentication using JWT  
 - Password hashing using bcrypt  
-- Role-based access control  
-- Protected routes using middleware  
+- Role-based access control (Admin, Instructor, Student)  
+- Protected API routes using middleware  
 
 ---
 
@@ -83,6 +82,7 @@ lms-mern-project/
 │
 ├── .env.example
 └── README.md
+_____________________________________________________________________________________________________
 
 ---
 
@@ -95,7 +95,8 @@ cd lms-mern-project
 2. Backend Setup
 cd backend
 npm install
-Create .env file:
+
+Create a .env file and add:
 
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
@@ -109,7 +110,7 @@ cd frontend
 npm install
 npm run dev
 📡 API Endpoints
-Auth
+Authentication
 POST /api/auth/register
 POST /api/auth/login
 Courses
@@ -120,7 +121,7 @@ Health Check
 GET /api/health
 📸 Screenshots
 
-Add your screenshots here
+Add screenshots here after uploading them
 
 /screenshots/home.png
 /screenshots/login.png
@@ -129,35 +130,35 @@ Add your screenshots here
 ⚡ Repository Optimization & Code Quality
 🧱 Architecture
 Modular backend structure (MVC pattern)
-Clean React component structure
-Separation of concerns
+Clean and reusable React components
+Proper separation of concerns
 🔐 Security
-JWT authentication
-bcrypt password hashing
-Protected routes & middleware
+JWT-based authentication
+Password hashing using bcrypt
+Protected routes with middleware
 ⚙️ Performance
-Async/await API handling
+Asynchronous API handling using async/await
 Optimized MongoDB queries
 Efficient React rendering
 🌐 Deployment
-Hosted on Render
-Environment variables configured
-Scalable structure for production
+Fully deployed on Render
+Environment variables configured for production
+Scalable full-stack architecture
 🧪 Testing
 API tested using Postman
-Error handling middleware implemented
+Centralized error handling middleware
 🧠 What I Learned
 Full-stack MERN development
-REST API design
-Authentication & authorization
-Deployment workflows
+RESTful API design
+Authentication and authorization systems
+Deployment and environment configuration
 Debugging and error handling
 🚀 Future Improvements
 Payment integration
-Video lectures
-Real-time chat
-Advanced UI/UX
-Performance optimization
+Video lecture system
+Real-time chat functionality
+Enhanced UI/UX design
+Performance optimizations
 👩‍💻 Author
 
 Areeba Saleem
@@ -168,4 +169,4 @@ GitHub: https://github.com/AreebaSaleem95
 
 ⭐ Acknowledgment
 
-Thanks to my instructors and learning programs for guidance and support.
+Thanks to my instructors and learning programs for their guidance and support.
